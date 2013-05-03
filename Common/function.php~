@@ -1,0 +1,7 @@
+<?php
+function isLogin(){
+    $userid = session('u_id');
+    return isset($userid);
+    
+}
+

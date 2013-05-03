@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+	
+	<body>
+	    <table>
+	        <tr>
+	            <th>文件名</th>
+	            <th>上传者</th>
+	            <th>上传日期</th>
+	            <th>文件类型</th>
+	            <th>文件大小</th>
+	            <th>下载</th>
+	        </tr>
+	        <volist name="file" id="record">
+	        <tr>
+	            <td>{$record.name}</td>
+	            <td>{$record.uploader}</td>
+	            <td>{$record.date}</td>
+	            <td>{$record.type}</td>
+	            <td>{$record.size}</td>
+	            <td><a href="{$record.path}{$record.name}">下载</a></td>
+	        </tr>
+	        </volist>
+	    </table>
+	</body>
+</html>
