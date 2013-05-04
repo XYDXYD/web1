@@ -1,7 +1,22 @@
 <?php
+define('EXPIRE', 60);
 function isLogin(){
-    $userid = session('u_id');
-    return isset($userid);
-    
+    return ($_SESSION['u_id']);
+}
+function isAdminLogin(){
+    return isLogin() && $_SESSION['group'] == 'admin';
 }
 
+function timeOut(){
+    if (isset($_SESSION['last_time']) && time() - $_SESSION['last_time'] < EXPIRE){
+        $_SESSION['last_time'] = time();
+    }else{
+        unsetSESSION();
+    }
+}
+
+function unsetSESSION(){
+    unset($_SESSION['u_id']);
+    unset($_SEESION['group']);
+    unset($_SESSION['last_time']);
+}

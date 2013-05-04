@@ -1,5 +1,0 @@
-<?php
-define('APP_DEBUG', TRUE);
-define('EXPIRE', 30);
-require './ThinkPHP/ThinkPHP.php';
-echo time();

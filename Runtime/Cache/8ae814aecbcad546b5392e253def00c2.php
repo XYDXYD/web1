@@ -20,12 +20,14 @@
         <form method="post" action="__URL__/update">
             <input type="hidden" name="a_id" value="<?php echo ($article["a_id"]); ?>" />
             标题：<input type="text" name="title" value="<?php echo ($article["title"]); ?>" />
-            分类：<select name="type" >
-                <option value="news" <?php echo ($selected['news']); ?>>新闻</option>
-                <option value="notice" <?php echo ($selected['notice']); ?>>通知</option>
-            </select>
-            <input type="submit" value="确定" />
+            分类：<input type="checkbox" name="type[]" value="news0" <?php echo ($checked['news0']); ?>>新闻</input>
+                 <input type="checkbox" name="type[]" value="news1" <?php echo ($checked['news1']); ?>>新闻</input>
+                 <input type="checkbox" name="type[]" value="news2" <?php echo ($checked['news2']); ?>>新闻</input>
+                 <input type="checkbox" name="type[]" value="news3" <?php echo ($checked['news3']); ?>>新闻</input>
+                 <input type="checkbox" name="type[]" value="news4" <?php echo ($checked['news4']); ?>>新闻</input>
+            
 		    <textarea name="content"><?php echo ($article["content"]); ?></textarea></br>
+		    <input type="submit" value="确定" />
         </form>
     </body>
 </html>
