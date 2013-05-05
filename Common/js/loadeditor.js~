@@ -1,7 +1,0 @@
-$(function() {
-    //在加载了kindeditor-min.js和jquery-1.9.1.min.js之后，为name属性为content的文本域加载在线编辑器
-	var editor = KindEditor.create('textarea[name="content"]',{
-		uploadJson : '__ROOT__/File/php/upload_json.php',
-		fileManagerJson : '__ROOT__/File/php/file_manager_json.php',
-		allowFileManager : true});
-});
