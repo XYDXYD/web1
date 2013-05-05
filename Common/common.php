@@ -1,4 +1,20 @@
 <?php
+define('EXPIRE', 300);
+function authenticate($privilege){
+    $user_id = session('u_id');
+    if (isset($user_id)){
+        if (time() - session('time') < EXPIRE){
+            session('time', time());
+            return !($privilege < session('privilege'));
+        }else{
+            session(null);
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
+
 function upload($type, $savePath){
     import('ORG.Net.UploadFile');
     $upload = new UploadFile();
@@ -20,3 +36,4 @@ function upload($type, $savePath){
         return array('success' => false, 'info' => $upload -> getErrorMsg());
     }
 }
+

@@ -1,10 +1,12 @@
 <?php
 class FileAction extends Action {
-    public function index(){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
+    public function _initialize(){
+        if (!authenticate(1)){
+            $this -> error('拒绝操作');
         }
-        
+    }
+
+    public function index(){
         $file = M('file');
         $this -> file = $file -> select();
 
@@ -12,11 +14,6 @@ class FileAction extends Action {
     }
     
     public function upload(){
-        if (!isLogon()){
-            //这里在批量上传的时候会出错，返回未登录，单个上传没问题
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-    
         $type = $this -> _get()['dir'];
         $save_path = __ROOT__. 'Public/'. $type. '/';
         $result = upload($type, $save_path);
@@ -42,10 +39,6 @@ class FileAction extends Action {
     }
     
     public function manage(){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-
         $type = $this -> _get()['dir'];
         $order = strtolower($this -> _get()['order']);
 
@@ -68,10 +61,6 @@ class FileAction extends Action {
     }
     
     public function delete($id = 0){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-
         $file = M('File');
         $file_info = $file -> find($id);
         

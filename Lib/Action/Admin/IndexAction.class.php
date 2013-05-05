@@ -1,17 +1,14 @@
 <?php
 class IndexAction extends Action {
     public function index(){
-	    if (!isLogon()){
-	        $this -> error('请登录', '__GROUP__/Index/login');
-	    }
-	    
+        if (!authenticate(1)){
+            $this -> error('拒绝操作');
+        }
+        
 	    $this -> display();
     }
     
     public function login(){
-        if (isLogon()){
-            $this -> error('您已登录', '__URL__/index');
-        }
         $this -> display();
     }
     
@@ -27,8 +24,8 @@ class IndexAction extends Action {
         }
         
         if ($userinfo['password'] == $password){
-            session('id', $userinfo['id']);
-            session('group', $userinfo['group']);
+            session('u_id', $userinfo['u_id']);
+            session('privilege', $userinfo['privilege']);
             session('time', time());
             
             $this -> success('登录成功', '__URL__/index');

@@ -1,10 +1,12 @@
 <?php
 class ArticleAction extends Action {
-    public function index(){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
+    public function _initialize(){
+        if (!authenticate(1)){
+            $this -> error('拒绝操作');
         }
+    }
 
+    public function index(){
         $article = M('Article');
         $this -> article = $article -> order('last_time desc') -> select();
         
@@ -12,10 +14,6 @@ class ArticleAction extends Action {
     }
 
     public function edit($id = 0){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-        
         $article = M('Article');
         $this -> article = $article -> find($id);
         
@@ -29,10 +27,6 @@ class ArticleAction extends Action {
     }
 
     public function update(){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-        
         $article = D('Article');
         $data = $this -> _post();
         
@@ -63,10 +57,6 @@ class ArticleAction extends Action {
     }
 
     public function read($id = 0){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-        
         $article = M('Article');
 
         $this -> article = $article -> find($id);
@@ -74,10 +64,6 @@ class ArticleAction extends Action {
     }
 
     public function delete($id = 0){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-
         $article = M('Article');
 
         if ($article -> delete($id)){

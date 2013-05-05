@@ -1,10 +1,12 @@
 <?php
 class UserAction extends Action {
-    public function index(){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
+    public function _initialize(){
+        if (!authenticate(0)){
+            $this -> error('拒绝操作');
         }
+    }
 
+    public function index(){
         $user = M('User');
         $this -> user = $user -> select();
         
@@ -12,10 +14,6 @@ class UserAction extends Action {
     }
     
     public function edit($id = 0){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-
         $user = M('User');
         $this -> user = $user -> find($id);
         $this -> selected = array($this -> user['group'] => 'selected');
@@ -24,10 +22,6 @@ class UserAction extends Action {
     }
     
     public function update(){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-
         $data = $this -> _post();
         $user = D('User');
 
@@ -60,10 +54,6 @@ class UserAction extends Action {
     }
     
     public function delete($id = 0){
-        if (!isLogon()){
-            $this -> error('请登录', '__GROUP__/Index/login');
-        }
-
         $user = M('User');
         
         if ($user -> delete($id)){
