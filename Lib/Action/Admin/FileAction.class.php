@@ -15,11 +15,11 @@ class FileAction extends Action {
     
     public function upload(){
         $type = $this -> _get()['dir'];
-        $save_path = __ROOT__. 'Public/'. $type. '/';
+        $save_path = 'Public/'. $type. '/';
         $result = upload($type, $save_path);
         
         if ($result['success']){
-            $return = array('error' => 0, 'url' => '/'. $save_path. $result['info'][0]['savename']);
+            $return = array('error' => 0, 'url' => __ROOT__.'/'. $save_path. $result['info'][0]['savename']);
             
             $data['date'] = date('Y-m-d');
             $data['savepath'] = $result['info'][0]['savepath'];
@@ -53,7 +53,7 @@ class FileAction extends Action {
             $file_list[$i]['filesize'] = $file_info[$i]['size'];
         }
         
-        $result['current_url'] = '/Public/'. $type . '/';
+        $result['current_url'] = 'Public/'. $type . '/';
         $result['total_count'] = count($file_list);
         $result['file_list'] = $file_list;
 
