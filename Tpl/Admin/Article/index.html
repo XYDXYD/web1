@@ -2,29 +2,45 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
 	</head>
 	
 	<body>
-        <table>
-            <tr>
-                <th>标题</th>
-                <th>创建时间</th>
-                <th>最后修改</th>
-                <th>类型</th>
-                <th colspan=3><a href="__URL__/edit">添加</a></th>
-            </tr>
-            <volist name="article" id="record">
-            <tr>
-                <td>{$record.title}</td>
-                <td>{$record.create_time}</td>
-                <td>{$record.last_time}</td>
-                <td>{$record.type}</td>
-                <td><a  href="__URL__/read/id/{$record.a_id}">查看</a></td>
-                <td><a  href="__URL__/edit/id/{$record.a_id}">编辑</a></td>
-                <td><a  href="__URL__/delete/id/{$record.a_id}">删除</a></td>
-            </tr>
-            </volist>
+	<body>
+	    <div class="container-fluid">
+	        <include file="Index:header" />
+	        <div class="row-fluid">
+	            <div class="span3">
+	                <include file="Index:navigation" />
+	            </div>
+	            <div class="span9">
+	                <table class="table table-condensed">
+                        <tr>
+                            <th>文章标题</th>
+                            <th>创建时间</th>
+                            <th>最后修改</th>
+                            <th>类型</th>
+                            <th colspan=3><a href="__URL__/edit">添加</a></th>
+                        </tr>
+                        <volist name="article" id="record">
+                        <tr>
+                            <td><a  href="__URL__/read/id/{$record.a_id}">{$record.title}</a></td>
+                            <td>{$record.create_time}</td>
+                            <td>{$record.last_time}</td>
+                            <td>{$record.type}</td>
+                            <td><a  href="__URL__/edit/id/{$record.a_id}">编辑</a></td>
+                            <td><a  href="__URL__/delete/id/{$record.a_id}">删除</a></td>
+                        </tr>
+                        </volist>
 
-        </table>
+                    </table>
+	            </div>
+	        </div>
+	        <include file="./Public/html/footer.html" />
+	    </div>
+	    <load href="__PUBLIC__/bootstrap/js/bootstrap.min.js" />
+	</body>
+</html>
+        
     </body>
 </html>

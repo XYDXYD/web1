@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
+	</head>
+	
+	<body>
+	    <div class="container-fluid">
+	        <include file="Index:header" />
+	        <div class="row-fluid">
+	            <div class="span3">
+	                <include file="Index:navigation" />
+	            </div>
+	            <div class="span9">
+	                <table class="table table-condensed">
+	                    <tr>
+	                        <th>文件名</th>
+	                        <th>上传日期</th>
+	                        <th>文件大小</th>
+	                        <th>操作</th>
+	                    </tr>
+	                    <volist name="file" id="record">
+	                    <tr>
+	                        <td><a href="/{$record.savepath}{$record.savename}">{$record.name}</a></td>
+	                        <td>{$record.date}</td>
+	                        <td>{$record.size}</td>
+	                        <td><a href="__URL__/delete/id/{$record.f_id}">删除</a></td>
+	                    </tr>
+	                    </volist>
+	        
+	                </table>
+	            </div>
+	        </div>
+	        <include file="./Public/html/footer.html" />
+	    </div>
+	    <load href="__PUBLIC__/bootstrap/js/bootstrap.min.js" />
+	</body>
+</html>
+
+

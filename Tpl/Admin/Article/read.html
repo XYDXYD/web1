@@ -2,12 +2,24 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
 	</head>
 	
 	<body>
-        <h1>{$article.title}</h1>
-        创建时间：{$article.create_time}<br />
-        最后修改：{$article.last_time}<br />
-        内容：{$article.content}<br />
-    </body>
+	    <div class="container-fluid">
+	        <include file="Index:header" />
+	        <div class="row-fluid">
+	            <div class="span3">
+	                <include file="Index:/navigation" />
+	            </div>
+	            <div class="span9">
+	                <h1 class="page-header">{$article.title}</h1>
+                    {$article.content}
+	            </div>
+	        </div>
+	        <include file="./Public/html/footer.html" />
+	    </div>
+	    <load href="__PUBLIC__/bootstrap/js/bootstrap.min.js" />
+	</body>
 </html>
+

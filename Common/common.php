@@ -1,5 +1,5 @@
 <?php
-define('EXPIRE', 300);
+define('EXPIRE', 7200);
 function authenticate($privilege){
     $user_id = session('u_id');
     if (isset($user_id)){

@@ -2,14 +2,31 @@
 class IndexAction extends Action {
     public function index(){
         if (!authenticate(1)){
-            $this -> error('拒绝操作');
+            $this -> redirect('Index/login');
         }
+        $this -> u_id = session('u_id');
         
 	    $this -> display();
     }
     
-    public function login(){
+    public function overview(){
         $this -> display();
+    }
+    
+    public function header(){
+        $this -> display();
+    }
+    
+    public function navigation(){
+        $this -> display();
+    }
+    
+    public function login(){
+        if (authenticate(1)){
+            $this -> redirect('Index/index');
+        }else{
+            $this -> display();
+        }
     }
     
     public function authenticate(){
@@ -20,7 +37,7 @@ class IndexAction extends Action {
         $userinfo = $user -> where(array('username' => $username)) -> select()[0];
         
         if (count($userinfo) == 0){
-            $this -> error('用户不存在。');
+            $this -> error('用户名错误');
         }
         
         if ($userinfo['password'] == $password){
@@ -28,14 +45,14 @@ class IndexAction extends Action {
             session('privilege', $userinfo['privilege']);
             session('time', time());
             
-            $this -> success('登录成功', '__URL__/index');
+            $this -> redirect('Index/index');
         }else{
-            $this -> error('登录失败', '__URL__/login');
+            $this -> error('密码错误', '__URL__/login');
         }
     }
     
     public function logout(){
         session(null);
-        $this -> redirect('/');
+        $this -> redirect('Index/login');
     }
 }
