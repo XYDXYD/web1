@@ -36,19 +36,19 @@
                             <div class="span12">
                                 <span class="help-block">标签</span>
 		                        <label class="checkbox inline">
-                                <input type="checkbox" id="news0" name="type[]" value="news0" {$checked['news0']} />A
+                                <input type="checkbox" id="news0" name="type[]" value="news0" {$checked['news0']} />新闻新闻
                                 </label>
                                 <label class="checkbox inline">
-                                <input type="checkbox" id="news1" name="type[]" value="news1" {$checked['news1']} />B
+                                <input type="checkbox" id="news1" name="type[]" value="news1" {$checked['news1']} />新闻新闻
                                 </label>
                                 <label class="checkbox inline">
-                                <input type="checkbox" id="news2" name="type[]" value="news2" {$checked['news2']} />C
+                                <input type="checkbox" id="news2" name="type[]" value="news2" {$checked['news2']} />新闻新闻
                                 </label>
                                 <label class="checkbox inline">
-                                <input type="checkbox" id="news3" name="type[]" value="news3" {$checked['news3']} />D
+                                <input type="checkbox" id="news3" name="type[]" value="news3" {$checked['news3']} />新闻新闻
                                 </label>
                                 <label class="checkbox inline">
-                                <input type="checkbox" id="news4" name="type[]" value="news4" {$checked['news4']} />E
+                                <input type="checkbox" id="news4" name="type[]" value="news4" {$checked['news4']} />新闻新闻
                                 </label>
                             </div>
                             <div class="span12">

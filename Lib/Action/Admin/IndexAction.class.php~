@@ -14,7 +14,8 @@ class IndexAction extends Action {
     }
 
     public function header(){
-        //$this -> display();
+        $this -> time = time();
+        $this -> display();
     }
     
     public function check(){

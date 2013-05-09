@@ -2,22 +2,42 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>登录后台管理系统</title>
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
 	</head>
 	
 	<body>
-	    <div class="container">
-	        <div class="span3 offset4">
-	            <h1 class="form-signin-heading">后台管理</h1>
-	            <form class="form-signin" method="post" action="__URL__/authenticate">
-	                <label for="username">用户名</label>
-	                <input type="text" name="username" id="username"/>
-	                <label for="password">密码</label>
-	                <input type="password" name="password" id="password" />
-	                <input type="submit" class="btn btn-primary" value="登录" />
-	            </form>
+	    <div class="container-fluid">
+	    <div class="row-fluid">
+	        <div class="row-fluid">
+	            <div class="span12 text-center">
+	                <h2>后台管理系统</h2>
+	            </div>
+	        </div>
+	        
+	        <div class="row-fluid">
+	            <div class="well span6 offset3">
+	                <form class="form-horizontal" action="__URL__/authenticate" method="post">
+	                    <div class="control-group">
+	                        <label class="control-label" for="username">用户名</label>
+	                        <div class="controls">
+	                            <input class="" type="text" name="username" id="username"/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="password">密码</label>
+	                        <div class="controls">
+	                            <input class="input-large" type="password" name="password" id="password" />
+	                        </div>
+	                    </div>
+	                    <div class=>
+	                    <div class="controls">
+	                        <input type="submit" class="btn btn-primary" value="登录" />
+	                    </div>
+	                </form>
+	            </div>
 	        </div>
 	    </div>
-	    <script type="text/javascript" src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+	    </div>
 	</body>
 </html>

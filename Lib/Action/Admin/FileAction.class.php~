@@ -5,7 +5,6 @@ class FileAction extends Action {
             $this -> error('拒绝操作');
         }
         $this -> classes = array('file' => 'active');
-        $this -> privilege = session('privilege');
     }
 
     public function index(){

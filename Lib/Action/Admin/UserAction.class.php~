@@ -5,7 +5,6 @@ class UserAction extends Action {
             $this -> error('拒绝操作');
         }
         $this -> classes = array('user' => 'active');
-        $this -> privilege = session('privilege');
     }
 
     public function index(){

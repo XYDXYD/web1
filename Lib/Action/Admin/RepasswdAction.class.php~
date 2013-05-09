@@ -5,7 +5,6 @@ class RepasswdAction extends Action {
             $this -> error('拒绝访问', __ROOT__. '/');
         }
         $this -> classes = array('repasswd' => 'active');
-        $this -> privilege = session('privilege');
     }
     
     public function index(){
