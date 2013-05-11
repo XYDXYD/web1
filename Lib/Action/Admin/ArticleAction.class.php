@@ -1,29 +1,53 @@
 <?php
 class ArticleAction extends Action {
     public function _initialize(){
-        if (!authenticate(1)){
+        if (authenticate(0)){
+        
+        }elseif (authenticate(1)){
+            $id = $this -> _get('id');
+            if ($id != ''){
+                $article = M('Article');
+                $u_id = $article -> find($id)['u_id'];
+                if ($u_id != session('u_id')){
+                    $this -> error('拒绝操作');
+                }
+            }
+        }else{
             $this -> error('拒绝操作');
         }
         $this -> classes = array('article' => 'active');
         $this -> privilege = session('privilege');
     }
 
-    public function index(){
+    public function index($order = 'last_time desc'){
         $article = M('Article');
-        $this -> article = $article -> order('last_time desc') -> select();
+        $user = M('User');
+        if (session('privilege') == 0){
+            $temp = $article -> order($order) -> select();
+        }else{
+            $temp = $article -> order($order) -> where(array('u_id' => session('u_id'))) -> select();
+        }
         
+        foreach($temp as $key => $value){
+            $temp[$key]['fullname'] = $user -> find($value['u_id'])['fullname'];
+        }
+        
+        $this -> article = $temp;
         $this -> display();
     }
 
     public function edit($id = 0){
-        $article = M('Article');
-        $this -> article = $article -> find($id);
+        $this -> article = M('Article') -> find($id);
         
-        foreach(explode(',', $this -> article['type']) as $value){
-            $checked[$value] = 'checked';
+        $checked = explode(',', $this -> article['type']);
+        foreach(M('ArticleType') -> select() as $key => $value){
+            $type[count($type)+1] = array('at_id' => $value['at_id'], 'name' => $value['name'], 'checked' => in_array($value['at_id'], $checked)?'checked':'');
+        }
+        foreach(M('AwardType') -> select() as $key => $value){
+            $type[count($type)+1] = array('at_id' => $value['at_id'], 'name' => $value['name'], 'checked' => in_array($value['at_id'], $checked)?'checked':'');
         }
         
-        $this -> checked = $checked;
+        $this -> type = $type;
         
         $this -> display();
     }
@@ -32,11 +56,14 @@ class ArticleAction extends Action {
         $article = D('Article');
         $data = $this -> _post();
         
+        if ($data['a_id'] != '' && $article -> find($data['a_id'])['u_id'] != session('u_id')){
+            $this -> error('拒绝操作');
+        }
+        
         foreach($data['type'] as $key => $value){
             $type .= $data['type'][$key]. ',';
         }
         $type = substr($type, 0, strlen($type) - 1);
-        $data['author'] = session('u_id');//可能会出现的情况：修改别人的文章后变成了自己，前提是大家都是管理员
         $data['type'] = $type;
 
         if ($article -> create($data)){
@@ -59,16 +86,28 @@ class ArticleAction extends Action {
     }
 
     public function read($id = 0){
-        $article = M('Article');
-
-        $this -> article = $article -> find($id);
+        $this -> article = M('Article') -> find($id);
         $this -> display();
     }
 
-    public function delete($id = 0){
-        $article = M('Article');
+    public function publish($id = 0){
+        if (M('Article') -> where(array('a_id' => $id)) -> setField('status', 1)){
+            $this -> success('发布成功', '__URL__/index');
+        }else{
+            $this -> error('发布失败', '__URL__/index');
+        }
+    }
 
-        if ($article -> delete($id)){
+    public function unpublish($id = 0){
+        if (M('Article') -> where(array('a_id' => $id)) -> setField('status', 0)){
+            $this -> success('撤回成功', '__URL__/index');
+        }else{
+            $this -> error('撤回失败', '__URL__/index');
+        }
+    }
+
+    public function delete($id = 0){
+    if (M('Article') -> delete($id)){
             $this -> success('删除成功', '__URL__/index');
         }else{    
             $this -> error('删除失败', '__URL__/index');

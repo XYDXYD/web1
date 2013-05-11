@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>活动报名详情</title>
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.css" />
+	</head>
+	
+	<body>
+	<body>
+	    <div class="container">
+	    <div class="row">
+	        <div class="span12">
+	            <include file="Index:header" />
+	        </div>
+	        <div class="span10 offset1">
+	            <table class="table table-condensed">
+                    <tr>
+                        <th>申请院校</th>
+                        <th>申请人</th>
+                        <th>职位</th>
+                        <th>电话</th>
+                    </tr>
+                    <volist name="activities" id="record">
+                    <tr>
+                        <td>{$record.fullname}</td>
+                        <td>{$record.name}</td>
+                        <td>{$record.position}</td>
+                        <td>{$record.phone}</td>
+                    </tr>
+                    </volist>
+                </table>
+	        </div>
+	        </div>
+	    </div>
+	</body>
+</html>

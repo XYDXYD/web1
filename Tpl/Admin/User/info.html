@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>管理用户</title>
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
+	</head>
+	
+	<body>
+	    <div class="container">
+	        <div class="row">
+	            <div class="span12">
+	                <include file="Index:header" />
+	            </div>
+	            <div class="span10 offset1">
+	                <table class="table table-condensed">
+                        <tr>
+                            <th>单位</th>
+                            <th>姓名</th>
+                            <th>职位</th>
+                            <th>办公电话</th>
+                            <th>手机</th>
+                            <th>邮箱</th>
+                        </tr>
+                        <volist name="users" id="record">
+                        <tr>
+                            <td>{$record.unit}</td>
+                            <td>{$record.name}</td>
+                            <td>{$record.position}</td>
+                            <td>{$record.office_number}</td>
+                            <td>{$record.phone_number}</td>
+                            <td>{$record.email}</td>
+                        </tr>
+                        </volist>
+                    </table>
+	            </div>
+	        </div>
+	    </div>
+	</body>
+</html>
+

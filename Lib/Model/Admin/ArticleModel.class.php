@@ -7,6 +7,7 @@ class ArticleModel extends Model {
     
     protected $_auto = array(
         array('create_time', 'time', 1, 'function'),
-        array('last_time', 'time', 3, 'function')
+        array('last_time', 'time', 3, 'function'),
+        array('u_id', 'getUserId', 1, 'function')
     );
 }

@@ -1,27 +1,42 @@
 <?php
 class UserAction extends Action {
     public function _initialize(){
-        if (!authenticate(0)){
+        if (!authenticate(1)){
             $this -> error('拒绝操作');
         }
         $this -> classes = array('user' => 'active');
-        $this -> privilege = session('privilege');
     }
 
     public function index(){
-        $user = M('User');
-        $this -> user = $user -> where(array('privilege' => array('neq', 0))) -> select();
+        $user = M('User') -> order('u_id') -> where(array('privilege' => array('gt', session('privilege')))) -> select();
+        foreach($user as $key => $value){
+            $user[$key]['office_number'] = M('Users') -> find($value['us_id'])['office_number'];
+        }
         
+        $this -> user = $user;
+        $this -> display();
+    }
+    
+    public function info($id = 0){
+        if ($id == 0){
+            $users = M('Users') -> select();
+        }else{
+            $users = M('Users') -> where(array('u_id' => $id)) -> select();
+        }
+        
+        foreach($users as $key => $value){
+            $users[$key]['unit'] = M('User') -> find($value['u_id'])['fullname'];
+        }
+        
+        $this -> users = $users;
         $this -> display();
     }
     
     public function edit($id = 0){
-        $user = M('User');
-        if (!($this -> user = $user -> find($id))){
-            $this -> user = array('privilege' => 2, 'status' => 1);
+        if (!($this -> user = M('User') -> find($id))){
+            $this -> user = array('privilege' => session('privilege')+1, 'status' => 1);
         }
-        $this -> selected = array($this -> user['privilege'] =='1'? 'admin':'user' => 'selected', $this -> user['status'] =='1'? 'allow':'disallow' => 'selected');
-
+        $this -> selected = array($this -> user['is_director'] =='1'? 'is_director':'not_director' => 'selected', $this -> user['status'] =='1'? 'allow':'disallow' => 'selected');
         $this -> display();
     }
     
@@ -68,9 +83,7 @@ class UserAction extends Action {
     }
     
     public function delete($id = 0){
-        $user = M('User');
-        
-        if (session('privilege') == '0' && $user -> delete($id)){
+        if (session('privilege') == '0' && M('User') -> delete($id)){
             $this -> success('删除成功', '__URL__/index');
         }else{
             $this -> error('删除失败', '__URL__/index');

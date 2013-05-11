@@ -3,13 +3,13 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>管理文章</title>
-		<load href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.css" />
 	</head>
 	
 	<body>
 	<body>
-	    <div class="container-fluid">
-	    <div class="row-fluid">
+	    <div class="container">
+	    <div class="row">
 	        <div class="span12">
 	            <include file="Index:header" />
 	        </div>
@@ -19,7 +19,8 @@
                         <th>文章标题</th>
                         <th>创建时间</th>
                         <th>最后修改</th>
-                        <th>类型标签</th>
+                        <th>文章作者</th>
+                        <th>文章状态</th>
                         <th>点击次数</th>
                         <th><a class="btn btn-mini btn-primary" href="__URL__/edit">添加</a></th>
                     </tr>
@@ -28,10 +29,18 @@
                         <td><a  href="__URL__/read/id/{$record.a_id}">{$record.title}</a></td>
                         <td>{$record.create_time|date="Y-m-d", ###}</td>
                         <td>{$record.last_time|date="Y-m-d", ###}</td>
-                        <td>{$record.type}</td>
+                        <td>{$record.fullname}</td>
+                        <td>{$record['status']=='0'?'未':'已'}发布</td>
                         <td>{$record.click}</td>
-                        <td><a class="btn btn-mini btn-info" href="__URL__/edit/id/{$record.a_id}">编辑</a>
-                            <a class="btn btn-mini btn-warning" href="__URL__/delete/id/{$record.a_id}">删除</a></td>
+                        <td> 
+                            <a class="btn btn-mini btn-danger" href="__URL__/delete/id/{$record.a_id}">删除</a>
+                            <a class="btn btn-mini btn-info" href="__URL__/edit/id/{$record.a_id}">编辑</a>
+                            <if condition="$record.status eq 0">
+                            <a class="btn btn-mini btn-success" href="__URL__/publish/id/{$record.a_id}">发布</a>
+                            <else />
+                            <a class="btn btn-mini btn-warning" href="__URL__/unpublish/id/{$record.a_id}">撤回</a>
+                            </if>
+                        </td>
                     </tr>
                     </volist>
                 </table>

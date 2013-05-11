@@ -8,10 +8,15 @@ class FileAction extends Action {
         $this -> privilege = session('privilege');
     }
 
-    public function index(){
-        $file = M('file');
-        $this -> file = $file -> select();
-
+    public function index($order = 'date desc'){
+        $file = M('File');
+        $user = M('User');
+        $temp = $file -> order($order) -> select();
+        foreach($temp as $key => $value){
+            $temp[$key]['fullname'] = $user -> find($value['u_id'])['fullname'];
+        }
+        
+        $this -> file = $temp;
         $this -> display();
     }
     

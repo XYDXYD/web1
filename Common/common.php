@@ -15,6 +15,10 @@ function authenticate($privilege){
     }
 }
 
+function getUserId(){
+    return session('u_id');
+}
+
 function upload($type, $savePath){
     import('ORG.Net.UploadFile');
     $upload = new UploadFile();

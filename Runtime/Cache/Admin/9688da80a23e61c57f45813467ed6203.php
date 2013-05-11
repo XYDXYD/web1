@@ -2,25 +2,28 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>查看文章</title>
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.min.css" />
 	</head>
 	
 	<body>
-	    <div class="container-fluid">
-	        <div class="row-fluid">
+	    <div class="container">
+	        <div class="row">
 	            <div class="span12">
-	                <div class="container-fluid" id="header">
-<div class="row-fluid">
+	                <div class="container" id="header">
+<div class="row">
     <div class="span12 offset1"><p>欢迎登录后台管理系统</p></div>
 </div>
-<div class="row-fluid">
+<div class="row">
     <div class="span12">
         <ul class="nav nav-tabs pull-right">
-	        <li class=<?php echo ($classes['article']); ?>><a href="__GROUP__/Article/index">管理文章</a></li>
-	        <li class=<?php echo ($classes['file']); ?>><a href="__GROUP__/File/index">管理文件</a></li>
-	        <li class=<?php echo ($classes['apply']); ?>><a href="__GROUP__/Index/check">查看申请</a></li>
-	        <?php if(($privilege) == "0"): ?><li class=<?php echo ($classes['user']); ?>><a href="__GROUP__/User/index">管理用户</a></li><?php endif; ?>
-	        <li class=<?php echo ($classes['repasswd']); ?>><a href="__GROUP__/Repasswd">更改密码</a></li>
+            <li class="<?php echo ($classes['activity']); ?>"><a href="__GROUP__/Activity/index">管理活动</a></li>
+	        <li class="<?php echo ($classes['article']); ?>"><a href="__GROUP__/Article/index">管理文章</a></li>
+	        <li class="<?php echo ($classes['file']); ?>"><a href="__GROUP__/File/index">管理文件</a></li>
+	        <li class="<?php echo ($classes['check']); ?>"><a href="__GROUP__/Index/check">查看申请</a></li>
+	        <li class="<?php echo ($classes['user']); ?>"><a href="__GROUP__/User/index">管理用户</a></li>
+	        <li class="<?php echo ($classes['about']); ?>"><a href="__GROUP__/Index/about">关于我们</a></li>
+	        <li class="<?php echo ($classes['repasswd']); ?>"><a href="__GROUP__/Repasswd">更改密码</a></li>
 	        <li><a href="__GROUP__/Index/logout">退出管理</a></li>
 	    </ul>
 	</div>
