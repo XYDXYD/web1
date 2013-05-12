@@ -1,7 +1,0 @@
-body{
-    background-color:red;
-}
-textarea{
-    width:700px;
-    height:300px;
-}
