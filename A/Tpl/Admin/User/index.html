@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>管理用户</title>
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.css" />
+	</head>
+	
+	<body>
+	    <div class="container">
+	        <div class="row">
+	            <div class="span12">
+	                <include file="Index:header" />
+	            </div>
+	            <div class="span12">
+	                <table class="table table-condensed">
+                        <tr>
+                            <th>学校全称</th>
+                            <th>联系地址</th>
+                            <th>邮政编码</th>
+                            <th>常任理事</th>
+                            <th>学生处电话</th>
+                            <th>允许登录</th>
+                            <th><a class="btn btn-mini btn-primary" href="__URL__/edit">添加</a></th>
+                        </tr>
+                        <volist name="user" id="record">
+                        <tr>
+                            <td><a href="__URL__/info/id/{$record.u_id}">{$record.fullname}</a></td>
+                            <td>{$record.address}</td>
+                            <td>{$record.postcode}</td>
+                            <td>{$record['is_director']?'是':'否'}</td>
+                            <td>{$record.office_number}</td>
+                            <td>{$record['status']?'是':'否'}</td>
+                            <td><a class="btn btn-mini btn-info" href="__URL__/edit/id/{$record.u_id}">修改</a>
+                        </tr>
+                        </volist>
+                    </table>
+                    <div class="span6 offset6">{$page}</div>
+	            </div>
+	        </div>
+	    </div>
+	</body>
+</html>
+
