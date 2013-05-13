@@ -13,7 +13,26 @@
 	                <include file="Index:header" />
 	            </div>
 	            <div class="span10 offset1">
-	                <h2 class="page-header">{$article.title}</h2>
+	                <div class="row">
+	                    <h2 class="page-header">{$article.title}</h2>
+	                    <div class="span5">
+	                    <p>作者：{$article.author}</p>
+	                    <p>创建日期：{$article.create_time|date="Y-m-d H:i", ###}<br />
+	                       最后修改：{$article.last_time|date="Y-m-d H:i", ###}
+	                    <p>
+	                    <p>分类：{$article.type}<p>
+	                <hr />
+	                </div>
+	                    <div class="span5">
+	                <if condition="$article.status eq 0">
+                        <a class="btn btn-large btn-success" href="__URL__/publish/id/{$article.a_id}">发布</a>
+                    <else />
+                        <a class="btn btn-large btn-warning" href="__URL__/unpublish/id/{$article.a_id}">撤回</a>
+                    </if>
+                        <a class="btn btn-large btn-info" href="__URL__/edit/id/{$article.a_id}">编辑</a>
+                        <a class="btn btn-large btn-danger" href="__URL__/delete/id/{$article.a_id}">删除</a>
+	                    </div>
+	                </div>
                     {$article.content}
 	            </div>
 	        </div>

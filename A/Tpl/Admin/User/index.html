@@ -9,19 +9,17 @@
 	<body>
 	    <div class="container">
 	        <div class="row">
-	            <div class="span12">
-	                <include file="Index:header" />
-	            </div>
+	            <include file="Index:header" />
 	            <div class="span12">
 	                <table class="table table-condensed">
                         <tr>
                             <th>学校全称</th>
                             <th>联系地址</th>
                             <th>邮政编码</th>
-                            <th>常任理事</th>
-                            <th>学生处电话</th>
-                            <th>允许登录</th>
-                            <th><a class="btn btn-mini btn-primary" href="__URL__/edit">添加</a></th>
+                            <th><small>常任理事</small></th>
+                            <th>联系电话</th>
+                            <th><small>允许登录<small></th>
+                            <th colspan="2"><a class="btn btn-mini btn-primary" href="__URL__/edit">添加</a></th>
                         </tr>
                         <volist name="user" id="record">
                         <tr>
@@ -32,10 +30,16 @@
                             <td>{$record.office_number}</td>
                             <td>{$record['status']?'是':'否'}</td>
                             <td><a class="btn btn-mini btn-info" href="__URL__/edit/id/{$record.u_id}">修改</a>
+                            <eq name="privilege" value="0">
+                            <td><a class="btn btn-mini btn-danger" href="__URL__/delete/id/{$record.u_id}">删除</a></td>
+                            </eq>
                         </tr>
                         </volist>
                     </table>
-                    <div class="span6 offset6">{$page}</div>
+                    <div class="row">
+                        <div class="span5 offset1"><a href="__URL__/info">所有联系人</a></div>
+                        <div class="span6">{$page}</div>
+                    </div>
 	            </div>
 	        </div>
 	    </div>

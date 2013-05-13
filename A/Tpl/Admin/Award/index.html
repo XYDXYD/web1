@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>管理活动</title>
+		<title>管理奖项</title>
 		<load href="__PUBLIC__/bootstrap/css/bootstrap.css" />
 	</head>
 	
@@ -10,11 +10,58 @@
 	<body>
 	    <div class="container">
 	    <div class="row">
-	        <div class="span12">
-	            <include file="Index:header" />
-	        </div>
-	        <div class="span12">
-	            <p>管理奖项。</p>
+	        <include file="Index:header" />
+	        <div class="row">
+	            <div class="span1">
+                    <div class="tabbable tabs-left">
+                        <ul class="nav nav-tabs">
+                        <li class="{$allaward}"><a href="__URL__/index/order/{$order}/type/0">所有奖项</a></li>
+                        <volist name="award_type" id="record">
+                        <li class="{$record['active']}"><a href="__URL__/index/order/{$order}/type/{$record.at_id}">{$record.name}</a></li>
+                        </volist>
+                        <li><a href="__URL__/edit/id/0">管理奖项</a></li>
+                        </ul>
+                    </div>
+	            </div>
+	            <div class="span10 offset1">
+	                <table class="table table-condensed">
+                        <tr>
+	                        <th>申请者</th>
+	                        <th>类型</th>
+	                        <th>申请时间</th>
+	                        <th>附加材料</th>
+	                        <th>状态</th>
+                            <th colspan="2">操作</th>
+	                    </tr>
+	                    <volist name="award" id="record">
+	                    <tr>
+	                        <td>{$record.fullname}</td>
+	                        <td>{$record.type}</td>
+	                        <td>{$record.date|date="Y-m-d", ###}</td>
+                            <td><a href="__ROOT__/{$record.filepath}">{$record.filename}</a></td>
+	                        <td>{$record['status']==0?'未':''}通过</td>
+	                        <td><a class="btn btn-mini btn-danger" href="__URL__/delete/id/{$record.aw_id}">删除</a></td>
+	                        <td><if condition="$record.status eq 0">
+	                            <a class="btn btn-mini btn-success" href="__URL__/pass/id/{$record.aw_id}">审核通过</a>
+	                            <else />
+	                            <a class="btn btn-mini btn-warning" href="__URL__/unpass/id/{$record.aw_id}">撤回通过</a>
+	                            </if>
+	                        </td>
+	                    </tr>
+	                    </volist>
+
+	                </table>
+	                <div class="row">
+                        <div class="span5">
+                            <span>排序:</span>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/u_id/type/{$type}">用户</a>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/date/type/{$type}">时间</a>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/at_id/type/{$type}">类型</a>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/status/type/{$type}">状态</a>
+                        </div>
+                        <div class="span5">{$page}</div>
+                    </div>
+	            </div>
 	        </div>
 	    </div>
 	</body>

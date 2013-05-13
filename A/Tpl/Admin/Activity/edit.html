@@ -8,9 +8,7 @@
 	<body>
 	    <div class="container">
 	    <div class="row">
-	        <div class="span12">
-	            <include file="Index:header" />
-	        </div>
+	        <include file="Index:header" />
             <div class="span8 offset2">
                 <form class="form-horizontal" method="post" action="__URL__/update">
                     <fieldset>
@@ -46,10 +44,16 @@
 	                            <input type="text" name="end_time" id="end_time" value="{$activity.end_time}" />
 	                        </div>
 	                    </div>
-	                    <div class="control-group inline">
+	                    <div class="control-group">
 	                        <label class="control-label" for="deadline">报名截至时间</label>
 	                        <div class="controls inline">
 	                            <input type="text" name="deadline" id="deadline" value="{$activity.deadline|date='Y-m-d H:i', ###}" />
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="desc">活动简介</label>
+	                        <div class="controls inline">
+	                            <textarea name="desc" id="desc" style="height:100px">{$activity.desc}</textarea>
 	                        </div>
 	                    </div>
 	                    <div class="controls">

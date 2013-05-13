@@ -20,8 +20,7 @@
 	<body>
 	    <div class="container-fluid">
 	    <div class="row-fluid">
-	        <div class="span12">
-	            <div class="container" id="header">
+	        <div class="container" id="header">
 <div class="row">
     <div class="span12"><p>欢迎登录后台管理系统</p></div>
 </div>
@@ -29,9 +28,9 @@
     <div class="span12">
         <ul class="nav nav-tabs pull-right">
             <li class="<?php echo ($classes['index']); ?>"><a href="__GROUP__/Index/index">管理首页</a></li>
+            <li class="<?php echo ($classes['article']); ?>"><a href="__GROUP__/Article/index">管理文章</a></li>
             <li class="<?php echo ($classes['award']); ?>"><a href="__GROUP__/Award/index">管理奖项</a></li>
             <li class="<?php echo ($classes['activity']); ?>"><a href="__GROUP__/Activity/index">管理活动</a></li>
-	        <li class="<?php echo ($classes['article']); ?>"><a href="__GROUP__/Article/index">管理文章</a></li>
 	        <li class="<?php echo ($classes['file']); ?>"><a href="__GROUP__/File/index">管理文件</a></li>
 	        <li class="<?php echo ($classes['user']); ?>"><a href="__GROUP__/User/index">管理用户</a></li>
 	        <li class="<?php echo ($classes['about']); ?>"><a href="__GROUP__/Index/about">关于我们</a></li>
@@ -41,8 +40,7 @@
 	</div>
 </div>
 
-	        </div>
-            <div class="span9 offset2">
+            <div class="span10 offset1">
                 <form method="post" action="__URL__/update">
                     <fieldset>
                         <legend><?php echo ($article['a_id']?'编辑':'添加'); ?>文章</legend>
@@ -52,11 +50,21 @@
                                 <input type="text" name="title" class="span10 offset1" id ="title" value="<?php echo ($article["title"]); ?>" />
                             </div>
                             <div class="span12">
-                                <label>标签</label>
-                                <?php if(is_array($type)): $i = 0; $__LIST__ = $type;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$record): $mod = ($i % 2 );++$i; if($record["at_id"] == 100): ?><br /><?php endif; ?>
-		                        <label class="checkbox inline">
-                                <input type="checkbox" name="type[]" value="<?php echo ($record['at_id']); ?>" <?php echo ($record['checked']); ?> /><?php echo ($record['name']); ?>
+                                <label>分类</label>
+                                <?php if(is_array($type)): $i = 0; $__LIST__ = $type;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$record): $mod = ($i % 2 );++$i;?><label class="checkbox inline"><?php echo ($record['name']); ?>
+                                <input type="checkbox" name="type[]" value="<?php echo ($record['at_id']); ?>" <?php echo ($record['checked']); ?> />
                                 </label><?php endforeach; endif; else: echo "" ;endif; ?>
+                                
+                            </div>
+                            <div class="span12">
+                                <label>相关</label>
+                                <label class="radio inline">无
+                                <input type="radio" name="label" value="0" <?php echo ($nolabel); ?>/>
+                                </label>
+                                <?php if(is_array($label)): $i = 0; $__LIST__ = $label;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$record): $mod = ($i % 2 );++$i;?><label class="radio inline">
+                                <input type="radio" name="label" value="<?php echo ($record['at_id']); ?>" <?php echo ($record['checked']); ?> /><?php echo ($record['name']); ?>
+                                </label><?php endforeach; endif; else: echo "" ;endif; ?>
+                                
                             </div>
                             <div class="span12">
                                 <br /><label for="content">内容</label>

@@ -4,6 +4,7 @@ class UserAction extends Action {
         if (!authenticate(1)){
             $this -> error('拒绝操作');
         }
+        $this -> privilege = session('privilege');
         $this -> classes = array('user' => 'active');
     }
 
@@ -89,7 +90,10 @@ class UserAction extends Action {
     }
     
     public function delete($id = 0){
-        if (session('privilege') == '0' && M('User') -> delete($id)){
+        if (!authenticate(0)){
+            $this -> error('拒绝操作');
+        }
+        if (M('User') -> delete($id)){
             $this -> success('删除成功', '__URL__/index');
         }else{
             $this -> error('删除失败', '__URL__/index');

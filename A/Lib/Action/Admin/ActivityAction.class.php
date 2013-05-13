@@ -23,7 +23,7 @@ class ActivityAction extends Action {
         $data = M('Activity');
         import('ORG.Util.Page');
         if (session('privilege') == 0){
-            $count = $data -> select();
+            $count = $data -> count();
             $page = new Page($count, 15);
             $this -> page = $page -> show();
             $this -> activity = $data -> order($order) -> limit($page->firstRow.','.$page->listRows) -> select();

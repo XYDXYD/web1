@@ -8,44 +8,54 @@
 	
 	<body>
 	    <div class="container">
+	    <div class="row">
+	        <include file="Index:header" />
 	        <div class="row">
-	            <div class="span12">
-	                <include file="Index:header" />
+	            <div class="span1">
+                    <div class="tabbable tabs-left">
+                        <ul class="nav nav-tabs">
+                        <li class="{$myfile}"><a href="__URL__/index/order/{$order}/award/0">我的文件</a></li>
+                        <volist name="award_type" id="record">
+                        <li class="{$record['active']}"><a href="__URL__/index/order/{$order}/award/{$record.at_id}">{$record.name}</a></li>
+                        </volist>
+                        </ul>
+                    </div>
 	            </div>
-	            <div class="span12">
+	            <div class="span10 offset1">
 	                <table class="table table-condensed">
-	                    <tr>
+                        <tr>
 	                        <th>文件名</th>
 	                        <th>类型</th>
 	                        <th>上传者</th>
 	                        <th>上传日期</th>
 	                        <th>文件大小</th>
-	                        <th>操作</th>
+                            <th>操作</th>
 	                    </tr>
 	                    <volist name="file" id="record">
 	                    <tr>
 	                        <td><a href="__ROOT__/{$record.savepath}{$record.savename}">{$record.name}</a></td>
 	                        <td>{$record.type}</td>
 	                        <td>{$record.fullname}</td>
-	                        <td>{$record.date}</td>
+                            <td>{$record.date}</td>
 	                        <td>{$record.size}</td>
 	                        <td><a class="btn btn-mini btn-danger" href="__URL__/delete/id/{$record.f_id}">删除</a></td>
 	                    </tr>
 	                    </volist>
-	        
+
 	                </table>
 	                <div class="row">
-                    <div class="span5 offset1">
-                        <span>排序:</span>
-                        <a class="btn btn-mini btn-inverse" href="__URL__/index/order/date desc">上传时间</a>
-                        <a class="btn btn-mini btn-inverse" href="__URL__/index/order/name">文件名称</a>
-                        <a class="btn btn-mini btn-inverse" href="__URL__/index/order/size desc">文件大小</a>
-                        <a class="btn btn-mini btn-inverse" href="__URL__/index/order/type">文件类型</a>
+                        <div class="span5">
+                            <span>排序:</span>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/date desc/award/{$award}">上传时间</a>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/name/award/{$award}">文件名称</a>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/size desc/award/{$award}">文件大小</a>
+                            <a class="btn btn-mini btn-inverse" href="__URL__/index/order/type/award/{$award}">文件类型</a>
+                        </div>
+                        <div class="span5">{$page}</div>
                     </div>
-                    <div class="span6">{$page}</div>
-                </div>
 	            </div>
 	        </div>
+	    </div>
 	    </div>
 	</body>
 </html>

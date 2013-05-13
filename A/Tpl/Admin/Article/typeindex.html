@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>添加文章类型</title>
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.css" />
+	</head>
+	
+	<body>
+	<body>
+	    <div class="container">
+	    <div class="row">
+	        <include file="Index:header" />
+            <div class="span4 offset4">
+                <table class="table table-condensed">
+                    <tr>
+                        <th colspan="2">文件类型列表</th>
+                    </tr>
+                    <volist name="article_type" id="record">
+                    <tr>
+                        <td>{$record.name}</td>
+                        <eq name="privilege" value="0">
+                        <td><a class="btn btn-mini btn-danger" href="__URL__/deltype/id/{$record.at_id}">删除</a></td>
+                        </eq>
+                    </tr>
+                    </volist>
+                </table>
+                <form method="post" action="__URL__/addtype">
+                    <div class="control-group">
+	                    <div class="controls">
+	                        <input type="text" name="name" />
+	                        <input type="submit" class="btn btn-primary" value="添加" style="vertical-align:5px" />
+	                    </div>
+	                </div>
+                </form>
+	        </div>
+	        </div>
+	    </div>
+	</body>
+</html>
+

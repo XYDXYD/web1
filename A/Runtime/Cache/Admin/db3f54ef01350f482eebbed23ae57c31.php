@@ -2,15 +2,16 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>管理用户</title>
+		<title>活动报名详情</title>
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/bootstrap/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/style/Admin/notprintheader.css" />
 	</head>
 	
 	<body>
+	<body>
 	    <div class="container">
-	        <div class="row">
-	            <div class="container" id="header">
+	    <div class="row">
+	        <div class="container" id="header">
     <div class="row">
         <div class="span12"><p>欢迎登录后台管理系统</p></div>
     </div>
@@ -31,27 +32,26 @@
     </div>
 </div>
 
+	        <div class="row">
 	            <div class="span10 offset1">
+	               
 	                <table class="table table-condensed">
                         <tr>
-                            <th>单位</th>
-                            <th>姓名</th>
+                            <th>申请人</th>
+                            <th>院校</th>
                             <th>职位</th>
-                            <th>办公电话</th>
-                            <th>手机</th>
-                            <th>邮箱</th>
+                            <th>电话</th>
                         </tr>
-                        <?php if(is_array($users)): $i = 0; $__LIST__ = $users;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$record): $mod = ($i % 2 );++$i;?><tr>
-                            <td><?php echo ($record["unit"]); ?></td>
+                        <?php if(is_array($activities)): $i = 0; $__LIST__ = $activities;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$record): $mod = ($i % 2 );++$i;?><tr>
                             <td><?php echo ($record["name"]); ?></td>
+                            <td><?php echo ($record["fullname"]); ?></td>
                             <td><?php echo ($record["position"]); ?></td>
-                            <td><?php echo ($record["office_number"]); ?></td>
-                            <td><?php echo ($record["phone_number"]); ?></td>
-                            <td><?php echo ($record["email"]); ?></td>
+                            <td><?php echo ($record["phone"]); ?></td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
 	            </div>
-	        </div>
+	        </dvi>
+	    </div>
 	    </div>
 	</body>
 </html>

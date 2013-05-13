@@ -20,10 +20,8 @@
 	<body>
 	    <div class="container-fluid">
 	    <div class="row-fluid">
-	        <div class="span12">
-	            <include file="Index:header" />
-	        </div>
-            <div class="span9 offset2">
+	        <include file="Index:header" />
+            <div class="span10 offset1">
                 <form method="post" action="__URL__/update">
                     <fieldset>
                         <legend>{$article['a_id']?'编辑':'添加'}文章</legend>
@@ -33,13 +31,25 @@
                                 <input type="text" name="title" class="span10 offset1" id ="title" value="{$article.title}" />
                             </div>
                             <div class="span12">
-                                <label>标签</label>
+                                <label>分类</label>
                                 <volist name="type" id="record">
-                                <if condition="$record.at_id eq 100"><br /></if>
-		                        <label class="checkbox inline">
-                                <input type="checkbox" name="type[]" value="{$record['at_id']}" {$record['checked']} />{$record['name']}
+		                        <label class="checkbox inline">{$record['name']}
+                                <input type="checkbox" name="type[]" value="{$record['at_id']}" {$record['checked']} />
                                 </label>
                                 </volist>
+                                
+                            </div>
+                            <div class="span12">
+                                <label>相关</label>
+                                <label class="radio inline">无
+                                <input type="radio" name="label" value="0" {$nolabel}/>
+                                </label>
+                                <volist name="label" id="record">
+		                        <label class="radio inline">
+                                <input type="radio" name="label" value="{$record['at_id']}" {$record['checked']} />{$record['name']}
+                                </label>
+                                </volist>
+                                
                             </div>
                             <div class="span12">
                                 <br /><label for="content">内容</label>

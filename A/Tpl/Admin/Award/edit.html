@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>管理奖项</title>
+		<load href="__PUBLIC__/bootstrap/css/bootstrap.css" />
+	</head>
+	
+	<body>
+	<body>
+	    <div class="container">
+	    <div class="row">
+	        <include file="Index:header" />
+	        <div class="row">
+	            <div class="span2 offset1">
+	                <div class="tabable tabs-left">
+                        <ul class="nav nav-tabs">
+                            <li class="{$add}"><a href="__URL__/edit/id/0">添加奖项</a></li>
+                            <volist name="award_type" id="record">
+                            <li class="{$record['active']}"><a href="__URL__/edit/id/{$record.at_id}">{$record.name}</a></li>
+                            </volist>
+                        </ul>
+                    </div>
+	            </div>
+	            <div class="span6">
+	                <form method="post" action="__URL__/update">
+	                    <filedset>
+	                    <legend>{$award_info['at_id']==''?'添加':'修改'}奖项</legend>
+	                    <input type="hidden" name="at_id" value="{$award_info['at_id']}" />
+	                    <div class="span6">
+	                        <label for="name">名称</label>
+	                        <input type="text" name="name" class="span6" id="name" value="{$award_info['name']}" />
+	                    </div>
+	                    <div class="span6">
+	                        <label for="form">申请表单</label>
+	                        <textarea name="form" class="span6" id="form" style="height:300px">{$award_info['form']}</textarea>
+	                    </div>
+	                    <div class="span6">
+		                    <br /><input type="submit" class="btn btn-primary" value="确定" />
+		                    <eq name="privilege" value="0">
+		                        <a class="btn btn-danger pull" href="__URL__/del/id/{$award_info['at_id']}">删除</a>
+		                    </eq>
+		                </div>
+		                </fieldset>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</body>
+</html>

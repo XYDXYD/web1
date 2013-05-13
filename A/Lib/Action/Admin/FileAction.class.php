@@ -8,18 +8,33 @@ class FileAction extends Action {
         $this -> privilege = session('privilege');
     }
 
-    public function index($order = 'date desc'){
+    public function index($order = 'date desc', $award = 0){
         $file = M('File');
         $user = M('User');
+
         import('ORG.Util.Page');
-        $count = $file -> count();
+        
+        $map['award'] = $award;
+        if ($award == 0){
+            $this -> myfile = 'active';
+            $map['u_id'] = session('u_id');
+        }
+        $count = $file -> where($map) -> count();
         $page = new Page($count, 15);
         $this -> page = $page -> show();
-        $temp = $file -> order($order) -> limit($page->firstRow.','.$page->listRows) -> select();
+        $temp = $file -> order($order) -> where($map) -> limit($page->firstRow.','.$page->listRows) -> select();
         foreach($temp as $key => $value){
             $temp[$key]['fullname'] = $user -> find($value['u_id'])['fullname'];
         }
         
+        $award_type = M('AwardType') -> select();
+        foreach($award_type as $key => $value){
+            $award_type[$key]['active'] = $value['at_id'] == $award?'active':'';
+        }
+        
+        $this -> award_type = $award_type;
+        $this -> order = $order;
+        $this -> award = $award;
         $this -> file = $temp;
         $this -> display();
     }
@@ -32,6 +47,7 @@ class FileAction extends Action {
         if ($result['success']){
             $return = array('error' => 0, 'url' => __ROOT__. '/'. $save_path. $result['info'][0]['savename']);
             
+            $data['u_id'] = session('u_id');
             $data['date'] = date('Y-m-d');
             $data['savepath'] = $result['info'][0]['savepath'];
             $data['savename'] = $result['info'][0]['savename'];

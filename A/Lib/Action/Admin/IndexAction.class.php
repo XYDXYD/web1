@@ -31,6 +31,10 @@ class IndexAction extends Action {
     }
     
     public function authenticate(){
+        if (session('verify') != md5($this -> _post('verify'))){
+            $this -> error('验证码错误', '__URL__/Index/login');
+        }
+        
         $username = $this -> _post()['username'];
         $password = md5('.xiang.'. $this -> _post()['password']. ',ren,');
 
