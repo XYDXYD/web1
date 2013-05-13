@@ -8970,3 +8970,737 @@ INFO: [ app_begin ] --START--
 INFO: Run ReadHtmlCache Behavior [ RunTime:0.000397s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
 
+[ 2013-05-14T03:08:06+08:00 ] 127.0.0.1 /A/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000196s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000252s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.005060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005149s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000216s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000231s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000136s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001040s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000436s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2013-05-14T03:08:07+08:00 ] 127.0.0.1 /A/index.php/Admin/Index/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000668s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000193s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000249s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.005817s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005879s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000202s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000213s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000120s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000947s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000393s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2013-05-14T03:08:07+08:00 ] 127.0.0.1 /A/index.php/Home/Public/verify/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000612s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+
+[ 2013-05-14T03:08:23+08:00 ] 127.0.0.1 /A/index.php/Admin/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000614s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000202s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000262s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 21 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.007330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007392s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000233s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000238s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000135s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001064s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000511s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2013-05-14T03:08:25+08:00 ] 127.0.0.1 /A/index.php/Admin/Article/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000611s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `think_article_type` [ RunTime:0.000410s ]
+SQL: SELECT * FROM `think_article_type`  [ RunTime:0.000090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE ( `u_id` = '2' ) LIMIT 1   [ RunTime:0.000079s ]
+SQL: SELECT * FROM `think_article` WHERE ( `u_id` = '2' ) ORDER BY last_time desc LIMIT 0,15   [ RunTime:0.000118s ]
+SQL: SELECT * FROM `think_user` WHERE ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000291s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000281s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000343s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 27 行.
+NOTIC: [8] Undefined variable: record /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011527s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011590s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000251s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000232s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000134s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001048s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000395s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2013-05-14T03:08:27+08:00 ] 127.0.0.1 /A/index.php/Admin/Award/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000645s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `think_award` [ RunTime:0.000729s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000669s ]
+SQL: SHOW COLUMNS FROM `think_file` [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `think_award_type` [ RunTime:0.000437s ]
+NOTIC: [8] Undefined variable: map /var/www/A/Lib/Action/Admin/AwardAction.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_award` LIMIT 1   [ RunTime:0.000108s ]
+NOTIC: [8] Undefined variable: map /var/www/A/Lib/Action/Admin/AwardAction.class.php 第 30 行.
+SQL: SELECT * FROM `think_award` ORDER BY u_id  [ RunTime:0.000075s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/A/Lib/Action/Admin/AwardAction.class.php 第 32 行.
+SQL: SELECT * FROM `think_award_type`  [ RunTime:0.000055s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000193s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000245s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 20 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 21 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011420s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000261s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000235s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000135s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001090s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000432s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2013-05-14T03:08:29+08:00 ] 127.0.0.1 /A/index.php/Admin/File/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000616s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `think_file` [ RunTime:0.000824s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000647s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_file` WHERE ( `award` = 0 ) AND ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000078s ]
+SQL: SELECT * FROM `think_file` WHERE ( `award` = 0 ) AND ( `u_id` = 2 ) ORDER BY date desc LIMIT 0,15   [ RunTime:0.000073s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/A/Lib/Action/Admin/FileAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `think_award_type` [ RunTime:0.000531s ]
+SQL: SELECT * FROM `think_award_type`  [ RunTime:0.000065s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000263s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000321s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 19 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 21 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 23 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 24 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 25 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 26 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.010786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010852s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000246s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000236s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000134s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001098s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000464s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2013-05-14T03:08:30+08:00 ] 127.0.0.1 /A/index.php/Admin/Article/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000614s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `think_article_type` [ RunTime:0.000415s ]
+SQL: SELECT * FROM `think_article_type`  [ RunTime:0.000082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE ( `u_id` = '2' ) LIMIT 1   [ RunTime:0.000059s ]
+SQL: SELECT * FROM `think_article` WHERE ( `u_id` = '2' ) ORDER BY last_time desc LIMIT 0,15   [ RunTime:0.000110s ]
+SQL: SELECT * FROM `think_user` WHERE ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000060s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000214s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000271s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 27 行.
+NOTIC: [8] Undefined variable: record /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011470s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011535s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000289s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000236s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000136s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001115s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000518s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2013-05-14T03:08:31+08:00 ] 127.0.0.1 /A/index.php/Admin/Award/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000615s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `think_award` [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `think_file` [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `think_award_type` [ RunTime:0.000436s ]
+NOTIC: [8] Undefined variable: map /var/www/A/Lib/Action/Admin/AwardAction.class.php 第 26 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `think_award` LIMIT 1   [ RunTime:0.000093s ]
+NOTIC: [8] Undefined variable: map /var/www/A/Lib/Action/Admin/AwardAction.class.php 第 30 行.
+SQL: SELECT * FROM `think_award` ORDER BY u_id  [ RunTime:0.000067s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/A/Lib/Action/Admin/AwardAction.class.php 第 32 行.
+SQL: SELECT * FROM `think_award_type`  [ RunTime:0.000064s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000238s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000300s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 20 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 21 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/3aaee604c846350c828f7642354c4040.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011587s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000256s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000235s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000135s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001115s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000455s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2013-05-14T03:08:32+08:00 ] 127.0.0.1 /A/index.php/Admin/File/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000619s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `think_file` [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000695s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_file` WHERE ( `award` = 0 ) AND ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000090s ]
+SQL: SELECT * FROM `think_file` WHERE ( `award` = 0 ) AND ( `u_id` = 2 ) ORDER BY date desc LIMIT 0,15   [ RunTime:0.000071s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/A/Lib/Action/Admin/FileAction.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `think_award_type` [ RunTime:0.000490s ]
+SQL: SELECT * FROM `think_award_type`  [ RunTime:0.000070s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000216s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000271s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 19 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 21 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 23 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 24 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 25 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/008425ed0cdcbb4b4a0d497dfc0bd8b2.php 第 26 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.010768s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010833s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000254s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000237s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000135s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001077s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000444s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000499s ]
+
+[ 2013-05-14T03:08:33+08:00 ] 127.0.0.1 /A/index.php/Admin/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000679s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `think_activity` [ RunTime:0.000844s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_activity` WHERE ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000085s ]
+SQL: SELECT * FROM `think_activity` WHERE ( `u_id` = 2 ) ORDER BY pub_time desc LIMIT 0,15   [ RunTime:0.000072s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000210s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000266s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 20 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 21 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 23 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009819s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000274s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000251s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000144s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001159s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000470s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2013-05-14T03:08:35+08:00 ] 127.0.0.1 /A/index.php/Admin/Activity/delete/id/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000792s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000881s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `think_activity` [ RunTime:0.000834s ]
+SQL: SELECT * FROM `think_activity` WHERE ( `ac_id` = 1 ) LIMIT 1   [ RunTime:0.000088s ]
+SQL: DELETE FROM `think_activity` WHERE ( `ac_id` = 1 ) [ RunTime:0.115308s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000284s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000346s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.005924s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005995s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000217s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000230s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000132s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001059s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000445s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000504s ]
+
+[ 2013-05-14T03:08:36+08:00 ] 127.0.0.1 /A/index.php/Admin/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000653s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000734s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `think_activity` [ RunTime:0.000872s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_activity` WHERE ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: SELECT * FROM `think_activity` WHERE ( `u_id` = 2 ) ORDER BY pub_time desc LIMIT 0,15   [ RunTime:0.000210s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000222s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000277s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 20 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 21 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 23 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009690s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000246s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000235s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000134s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001068s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000448s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2013-05-14T03:08:37+08:00 ] 127.0.0.1 /A/index.php/Admin/Activity/delete/id/2
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000612s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+SQL: SHOW COLUMNS FROM `think_activity` [ RunTime:0.000849s ]
+SQL: SELECT * FROM `think_activity` WHERE ( `ac_id` = 2 ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: DELETE FROM `think_activity` WHERE ( `ac_id` = 2 ) [ RunTime:0.054259s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000287s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000348s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.005914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005983s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000216s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000232s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000133s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001055s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000455s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2013-05-14T03:08:38+08:00 ] 127.0.0.1 /A/index.php/Admin/Activity/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000638s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `think_activity` [ RunTime:0.000847s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_activity` WHERE ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: SELECT * FROM `think_activity` WHERE ( `u_id` = 2 ) ORDER BY pub_time desc LIMIT 0,15   [ RunTime:0.000202s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000215s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000270s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 20 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 21 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 23 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/ebc371cf693641a861f96de335ee6a67.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009841s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000251s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000264s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000136s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001105s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000450s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000508s ]
+
+[ 2013-05-14T03:08:39+08:00 ] 127.0.0.1 /A/index.php/Admin/User/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000640s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000842s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_user` WHERE ( `privilege` > '1' ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SELECT * FROM `think_user` WHERE ( `privilege` > '1' ) ORDER BY u_id LIMIT 0,15   [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `think_users` [ RunTime:0.000606s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000078s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000071s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000056s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000065s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000064s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000062s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000058s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000062s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000058s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000082s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000062s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000068s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000067s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000066s ]
+SQL: SELECT * FROM `think_users` WHERE ( `us_id` = 0 ) LIMIT 1   [ RunTime:0.000064s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000280s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000339s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/ff0d86b691b1722afa6318d1605e6c93.php 第 19 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/ff0d86b691b1722afa6318d1605e6c93.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/ff0d86b691b1722afa6318d1605e6c93.php 第 21 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/ff0d86b691b1722afa6318d1605e6c93.php 第 22 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/ff0d86b691b1722afa6318d1605e6c93.php 第 23 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/ff0d86b691b1722afa6318d1605e6c93.php 第 25 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/ff0d86b691b1722afa6318d1605e6c93.php 第 26 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.009708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009776s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000284s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000236s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000135s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001122s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000428s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000483s ]
+
+[ 2013-05-14T03:08:41+08:00 ] 127.0.0.1 /A/index.php/Admin/Index/about
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000617s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000191s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000249s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/e49c98b6cb44e05682f5c812268248fc.php 第 20 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/e49c98b6cb44e05682f5c812268248fc.php 第 21 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/e49c98b6cb44e05682f5c812268248fc.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/e49c98b6cb44e05682f5c812268248fc.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/e49c98b6cb44e05682f5c812268248fc.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/e49c98b6cb44e05682f5c812268248fc.php 第 25 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/e49c98b6cb44e05682f5c812268248fc.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.006683s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006740s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000219s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000230s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000133s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001031s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000443s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000497s ]
+
+[ 2013-05-14T03:08:42+08:00 ] 127.0.0.1 /A/index.php/Admin/Repasswd
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000614s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000194s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000250s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/472443bd762680d735ab70451e389a88.php 第 19 行.
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/472443bd762680d735ab70451e389a88.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/472443bd762680d735ab70451e389a88.php 第 21 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/472443bd762680d735ab70451e389a88.php 第 22 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/472443bd762680d735ab70451e389a88.php 第 23 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/472443bd762680d735ab70451e389a88.php 第 24 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/472443bd762680d735ab70451e389a88.php 第 25 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.007056s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007114s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000226s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000233s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000132s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001068s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000447s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2013-05-14T03:08:43+08:00 ] 127.0.0.1 /A/index.php/Admin/Index/login
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000634s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000191s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000248s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.005855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005918s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000220s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000233s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000133s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001035s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000430s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2013-05-14T03:08:43+08:00 ] 127.0.0.1 /A/index.php/Home/Public/verify/
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000628s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+
+[ 2013-05-14T03:08:54+08:00 ] 127.0.0.1 /A/index.php/Admin/Index/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000618s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000203s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000264s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: article /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 21 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/3e2c5b3723125ba4e3528de39b9d496a.php 第 27 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.007292s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007350s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000236s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000239s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000134s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001069s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000514s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2013-05-14T03:08:55+08:00 ] 127.0.0.1 /A/index.php/Admin/Article/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000621s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `think_article_type` [ RunTime:0.000425s ]
+SQL: SELECT * FROM `think_article_type`  [ RunTime:0.000079s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE ( `u_id` = '2' ) LIMIT 1   [ RunTime:0.000090s ]
+SQL: SELECT * FROM `think_article` WHERE ( `u_id` = '2' ) ORDER BY last_time desc LIMIT 0,15   [ RunTime:0.000132s ]
+SQL: SELECT * FROM `think_user` WHERE ( `u_id` = 2 ) LIMIT 1   [ RunTime:0.000241s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000212s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000263s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 27 行.
+NOTIC: [8] Undefined variable: record /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.013984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014045s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000291s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000238s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000136s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001120s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000439s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2013-05-14T03:08:57+08:00 ] 127.0.0.1 /A/index.php/Admin/Article/delete/id/1
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000629s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.000810s ]
+SQL: SELECT * FROM `think_article` WHERE ( `a_id` = 1 ) LIMIT 1   [ RunTime:0.000330s ]
+SQL: DELETE FROM `think_article` WHERE ( `a_id` = 1 ) [ RunTime:0.139248s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000287s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000347s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.005974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006044s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000220s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000256s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000133s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000317s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001079s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000481s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2013-05-14T03:08:58+08:00 ] 127.0.0.1 /A/index.php/Admin/Article/index
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000621s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `think_article` [ RunTime:0.000808s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.000644s ]
+SQL: SHOW COLUMNS FROM `think_article_type` [ RunTime:0.000413s ]
+SQL: SELECT * FROM `think_article_type`  [ RunTime:0.000074s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_article` WHERE ( `u_id` = '2' ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: SELECT * FROM `think_article` WHERE ( `u_id` = '2' ) ORDER BY last_time desc LIMIT 0,15   [ RunTime:0.000172s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/A/Lib/Action/Admin/ArticleAction.class.php 第 50 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000208s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000258s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: index /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 20 行.
+NOTIC: [8] Undefined index: award /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 22 行.
+NOTIC: [8] Undefined index: file /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 23 行.
+NOTIC: [8] Undefined index: activity /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 24 行.
+NOTIC: [8] Undefined index: user /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 25 行.
+NOTIC: [8] Undefined index: about /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 26 行.
+NOTIC: [8] Undefined index: repasswd /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 27 行.
+NOTIC: [8] Undefined variable: record /var/www/A/Runtime/Cache/Admin/b0152606be0b6f8f72ab2288300c133b.php 第 38 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.011140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011202s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000259s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000236s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000134s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001083s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000430s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000485s ]
+
